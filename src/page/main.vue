@@ -9,8 +9,6 @@
         <div></div>
       </div>
     </div>
-
-
     <section v-if="hasList">
 
       <div class="main-con">

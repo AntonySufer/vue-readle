@@ -5,10 +5,21 @@
       <p>一点小说</p>
       <div class="main-head">
         <router-link to="/seach"><img class="sea-img" src="@assets/img/search.png"/></router-link>
-        <router-link to="/"><img class="menu-img" src="@assets/img/menu.png"/></router-link>
+         <img class="menu-img" src="@assets/img/menu.png" @click="showMenuFunc"/>
+
         <div></div>
       </div>
     </div>
+    <!--菜单-->
+    <div v-transfer-dom >
+      <popup v-model="showMenu" position="top"  max-height="60%">
+        <group gutter="0px" >
+          <router-link to="/my"><cell   class="cell-ref" v-for="i in ['关于']" :key="i" :title="i"  ></cell></router-link>
+        </group>
+
+      </popup>
+    </div>
+
     <section v-if="hasList">
 
       <div class="main-con">
@@ -29,19 +40,29 @@
 
 
 </template>
-
 <style lang="scss" scoped>
-
+  .cell-ref{
+    font-size:34px;
+    text-align: center;
+    background: #FE9424;
+  }
 </style>
 
 <script type="text/javascript">
+  import { ColorPicker, Cell,TransferDom, Popup, Group } from 'vux'
 
  export default {
     components: {
-
+      Popup,
+      Group,
+      Cell
     },
+   directives: {
+     TransferDom
+   },
     data () {
       return {
+        showMenu:false,
         bookList : this.$util.getStore('bookList') || [], //我的书架
       }
     },
@@ -63,8 +84,11 @@
         goBook(item){
           this.$router.push({name: 'book',params:{'id':item._id,'page':item.page,'top':item.scrollTop}});
         },
-       goSeach(){
+        goSeach(){
          this.$router.push('/seach');
+        },
+       showMenuFunc(){
+            this.showMenu = true ;
       }
     }
 

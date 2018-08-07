@@ -38,7 +38,7 @@
         <div class="sea-ul">
           <div class="sea-li" v-for="(item, index) in booksList"  @click="goDeatail(item._id)">
             <div class="img-div">
-              <img v-bind:src="item.cover" onerror="javascript:this.src='@asset/img/error.jpg';" />
+              <img v-bind:src="item.cover" :onerror="defaultImg" />
             </div>
             <div>
               <p class="sea-li-tit" v-text="item.title">这是标题</p>
@@ -65,6 +65,7 @@
     },
     data () {
       return {
+        defaultImg: 'this.src="' + require('@assets/img/error.jpg') + '"',
         query:'',
         start:0,
         limit:20,

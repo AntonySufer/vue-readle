@@ -27,7 +27,8 @@ export default new Router({
   mode:routerMode,
   routes: [
     { path: '/', component: resolve => require(['../page/main.vue'], resolve) },
-    { path: 'home', component: resolve => require(['../page/main.vue'], resolve) },
+    { path: '/home', component: resolve => require(['../page/main.vue'], resolve) },
+    { path: '/my', component: resolve => require(['../page/my.vue'], resolve) },
     { path: '*', component: resolve => require(['../components/err.vue'], resolve) },
     { path: '/seach',meta: { keepAlive: true }, component: resolve => require(['../page/seach.vue'], resolve) },
     { path: '/book/:id?', name: 'book',   component: resolve => require(['../page/bookItem.vue'], resolve)},

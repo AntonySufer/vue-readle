@@ -69,7 +69,7 @@ import {mapState,mapActions,mapGetters} from 'vuex'
     },
     data () {
       return {
-        toPath:'home',
+        toPath:'',
         hisBookClass:'',
         hisBookText:'+ 追更新',
         bookItemStore:this.$util.getStore('bookIdList') || [], //小说记录

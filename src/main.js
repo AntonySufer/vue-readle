@@ -15,6 +15,9 @@ Vue.prototype.$axios = axios;
 import {api} from './config/env'; /*请求url链接*/
 Vue.prototype.$api = api;
 
+import commomUtils from './config/commonUtils'   /*数据请求*/
+Vue.prototype.$util = commomUtils;
+
 
 import Loading from './components/loading.vue'
 Vue.component('Loading',Loading)  /*自定义loading 组件*/
@@ -32,7 +35,7 @@ import { ToastPlugin} from 'vux'  /**vux的弹框组件*/ //ConfirmPlugin,AlertP
 //Vue.use(AlertPlugin)
 
 //公用的弹窗(全局变量)
-Vue.prototype.showToast = function(text,type,width="8em",postion='bottom'){
+Vue.prototype.showToast = function(text,type,width="7.6em",postion='bottom'){
   this.$vux.toast.show({
     text: text,
     type: type,
@@ -48,6 +51,22 @@ if ('addEventListener' in document) {
   }, false);
 }
 
+router.beforeEach((to, from, next) => {
+
+  if (from.path =='/seach') { //主页seach刷新
+    if (to.path=='/'){
+      from.meta.keepAlive = false;
+    }else{
+      from.meta.keepAlive = true;
+    }
+
+  }else{
+    if (from.path=='/seach'){
+      from.meta.keepAlive = true;
+    }
+  }
+  next();
+});
 
 
 

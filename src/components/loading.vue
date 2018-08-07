@@ -76,7 +76,7 @@
     -webkit-animation: ball-spin-fade-loader 1s 0.84s infinite linear;
     animation: ball-spin-fade-loader 1s 0.84s infinite linear; }
   .ball-spin-fade-loader > div {
-    background-color: #399;
+    background-color: #FE9424;
     width: 15px;
     height: 15px;
     border-radius: 100%;

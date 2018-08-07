@@ -4,7 +4,7 @@
   width: 100%;
   position: fixed;
   top:0;
-  background:#24292C ;
+  background:#FE9424 ;
   color: #fff;
 
   .header-back{
@@ -42,182 +42,524 @@
 /*footer  css  end*/
 
 
-/**index 首页  start**//**index 首页  start**/
-.main-content{
-   width: 100%;
-   height: 100%;
-   background: url("../img/bgindex.jpg")  repeat-y center top ;
-   background-size: 100% 100%;
 
-.index-autor {
-    z-index: 99;
-     position: fixed;
-    bottom: 100px;
-    font-size: 35px;
-    font-weight: bold;
-    margin-left: 40%;
-    color: #333;
-    img {
-      border-radius: 60px;
-      border: 2px solid #e5e5e5;
-      width: 120px;
-      height: 120px;
-    }
+/*main.vue main.vue main.vue start*/
+
+.main-content {
+  width: 100%;
+  height: 100%;
+  background: #f8f8f8;
+
+  .main-header {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #FE9424;
+    color: #fff;
+    display: flex;
+    -webkit-display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
     p {
-      margin-top: 20px;
-      text-align: center;
+      margin-left: 25px;
+      line-height: 80px;
+      font-size: 30px;
+    }
+    .main-head {
+      img {
+        width: 48px;
+        margin-left: 20px;
+        height: 48px;
+        margin-right: 25px;
+      }
+      .sea-img {
+        width: 42px;
+        height: 42px;
+      }
+    }
+    }
+
+    .main-con {
+      padding: 80px 20px 0 20px;
+
+      display: flex;
+      -webkit-display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-start;
+      justify-items: center;
+      .main-li {
+        width: 20%;
+        margin-top: 20px;
+        .main-li-pre {
+
+          width: 100%;
+          text-align: center;
+          img {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            width: 90%;
+            border: 1px solid #e5e5e5;
+            height: 200px;
+            -moz-box-shadow: 5px 5px 5px #888888; /* 老的 Firefox */
+            box-shadow: 5px 5px 5px #888888;
+          }
+        }
+      }
 
     }
-  }
 
-  .main-login{
-     margin-top:60%;
-  }
-
-}
-
-
-
-/**index 首页  end**//**index 首页  end**/
-
-
-
-/**art 文章  start**//**art 文章  start**/
-/**art 文章  start**//**art 文章  start**/
-.art-content{
-   .art-head{
-     position: fixed;
-     top:80px;
-     width: 100%;
-     background: #fff;
-     border-bottom:2px solid #FBFBFB;
-     -moz-box-shadow:1px 1px 1px #FBFBFB, 2px 2px 5px #FBFBFB;
-     -webkit-box-shadow:1px 1px 1px #FBFBFB, 2px 2px 5px #FBFBFB;
-     box-shadow:1px 1px 1px #FBFBFB, 2px 2px 5px #FBFBFB;
-
-     img{
-           display: inline-block;
-           height:48px;
-           width:48px;
-           margin-top:10px;
-           margin-left:20px;
-
-       }
-   }
-
-   .art-mid{
-      margin-top: 140px;
+    .main-seach-p {
       width: 100%;
-      background: #fff;
-      overflow-y: auto;
-      font-size:30px;
-
-   }
-  .art-title{
-    padding: 0 20px;
-    font-size:42px;
-    color: #000;
-
-  }
-
-  .art-img{
-    width:100%;
-    height: 350px;
-  }
-
-  .yuedu{
-     height: 50px;
-     line-height: 50px;
-     font-size:26px;
-     color: #999;
-    span{
-      padding-left:20px ;
+      font-size: 32px;
+      color: #999;
+      text-align: center;
+      position: absolute;
+      top: 120px;
     }
-  }
-
-  .art-mid-con{
-    padding : 0px 20px;
-    color: #000;
-    font-size:38px;
-  }
 
 
 }
-/**art 文章  end**//**art 文章  end**/
-/**art 文章  end**//**art 文章  end**/
+/*main.vue main.vue main.vue end*/
 
 
 
-/** history start  **//**history start   **/
-/** history start  **//**history start   **/
-.history-content{
-   width: 100%;
+
+/*seach css  start*/
+.seach-content{
    height: 100%;
-  .his-con{
+   width: 100%;
+  .seach-header{
+    height:80px;
+    width: 100%;
+    position: fixed;
+    top:0;
+    background:#FE9424 ;
+    color: #fff;
+    display: flex;
+    -webkit-display:flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    p{
+      margin-left: 25px;
+      font-size:30px;
+    }
+    .img-p{
+      text-align: center;
+      margin-left: 10px;
+      padding-top: 10px;
+    }
+    .menu-img{
+      width:40px;
+      margin-left: 30px;
+      height: 40px;
+    }
+    .input-p{
+      width:70%;
+    }
+    .sea-input{
+      padding-left:20px;
+      font-size:28px;
+      width:100%;
+      height: 45px;
+      border: 0px;
+      border-radius: 20px;
+    }
+    .header-back{
+      font-size:40px;
+      display: inline-block;
+      width: 50px;
+    }
+
+  }
+  .his-no-search{
+    padding-top:150px;
+    z-index: 99999;
+    font-size:34px;
+    color: #999999;
+    text-align: center;
+  }
+  /*中间内容*/
+  .sea-con{
+
     min-height: 480px;
     position: fixed;
     width: 100%;
-
     top:80px;
     left:0;
     bottom:0px;
     overflow: hidden;
     background: #fff;
+
+
+
     .his-list{
-       border-bottom: 1px solid #f2f2f2;
-       padding:10px 20px  ;
-      .his-title{
-        font-size:36px;
-        line-height: 50px;
-      }
-      .his-date{
-        font-size:20px;
-        color: #999;
+       border-bottom: 1px solid #e5e5e5;
+       padding: 20px;
+       .his-tit{
+         font-size:30px;
+       }
+       .his-li{
+         font-size:28px;
+         color: #fff;
+         display: flex;
+         -webkit-display:flex;
+         flex-flow: row wrap;
+         justify-content: flex-start;
+         align-items: center;
+         span{
+           opacity: .7;
+           border-radius: 16px;
+           display: inline-block;
+           padding: 5px 10px;
+           margin-right: 10px;
+           margin-top: 10px;
+           height: 40px;
+
+
+         }
+         span:nth-child(4n+1){
+           background: #63A69F;
+         }
+         span:nth-child(4n+2){
+           background: #F2E1AC;
+         }
+         span:nth-child(4n+3){
+           background: #F2836B;
+         }
+         span:nth-child(4n+3){
+           background: #F2594B;
+         }
+         span:nth-child(4n+4){
+           background: #CD2C24;
+         }
+         span:nth-child(4n+5){
+           background: #047878;
+         }
+         span:nth-child(4n+6){
+           background: #7F1637;
+         }
+         span:nth-child(4n+7){
+           background: #FFB733;
+         }
+         span:nth-child(4n+8){
+           background: #F57336;
+         }
+
+
+       }
+
+
+    }
+    .remove-his{
+      width:100%;
+      margin-top: 40px;
+      text-align: center;
+      img{
+        width: 35px;
+        height: 35px;
+        vertical-align:middle;
       }
     }
 
   }
 
+   /*查询内容list*/
+  .sea-list{
+    min-height: 480px;
+    position: fixed;
+    width: 100%;
+    top:80px;
+    left:0;
+    bottom:0px;
+    overflow-y: hidden;
+    background: #fff;
+
+    .sea-ul{
+      padding: 0 25px;
+    .sea-li{
+      padding: 20px 0;
+      border-bottom: 1px solid #e5e5e5;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      .img-div{
+        height: 174px;
+        width: 137px;
+        margin-right: 20px;
+        img{
+
+          height: 174px;
+          width: 137px;
+
+        }
+      }
+
+      .sea-li-tit{
+        font-size:30px;
+        color:#595959;
+        word-break: break-all;
+        font-weight:bold;
+        text-overflow: ellipsis;
+        display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+        -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+        -webkit-line-clamp: 1; /** 显示的行数 **/
+        overflow: hidden;  /** 隐藏超出的内容 **/
+        line-height: 50px;
+      }
+      .sea-li-readme{
+        font-size:26px;
+        line-height: 40px;
+        color:#595959;
+      }
+      .sea-li-jieshao{
+        font-size:24px;
+        line-height: 30px;
+        color: #b6b6b6;
+        word-break: break-all;
+        font-weight:bold;
+        text-overflow: ellipsis;
+        display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+        -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+        -webkit-line-clamp: 3; /** 显示的行数 **/
+        overflow: hidden;  /** 隐藏超出的内容 **/
+
+      }
+
+
+
+      }
+
+    }
+
+
+  }
+
+
 }
-/** history end  **//**history end   **/
-/** history end  **//**history end   **/
+/*seach css  end*/
 
 
+/*bookItem.vue*/
+.book-content{
+    width: 100%;
+    top:80px;
+    left:0;
+    bottom: 0;
+    position: absolute;
+   .book-tit-con{
+      padding: 0 25px;
 
-/** my start  **//** my start  **/
-/** my start  **//** my start  **/
+      .tit-div{
+         margin-top: 20px;
+      }
+      .tit-img{
+         float: left;
+         width: 15%;
+        img{
+          height: 137px;
+          width: 100px;
+        }
+      }
+      .tit-readme{
 
-.my-content{
-   height: 100%;
+        float: left;
+        width: 85%;
+        font-size:28px;
+        p{
+          margin-left: 15px !important;
+        }
+        >p:nth-child(1){
+          line-height: 50px;
+          font-size:36px;
+          color: #000;
+        }
+        >p:nth-child(2){
+          color: #ea6f5a;
+        }
+        >p:nth-child(3){
+          color: #999999;
+        }
+      }
 
-   .my-mid{
-     padding-top: 80px;
-     padding-left: 20px;
-     display: flex;
-     flex-flow: column nowrap;
-     justify-content: center;
-     align-items:center;
 
-     img{
-        margin-top: 20px;
-        height: 200px;
-        width: 200px;
+     .button-div{
+       margin-top: 20px ;
+       width: 100%;
+       display: flex;
+       -webkit-display:flex;
+       flex-flow: row nowrap;
+       justify-content: space-between;
+       align-items: center;
+       .addbook{
+          color: #fff;
+          font-size:30px;
+          border-radius: 10px;
+          text-align: center;
+          line-height: 60px;
+          background: #FE9424;
+          height: 60px;
+          width: 45%;
+       }
+       .graybook{
+         background: #aaaaaa !important;
+       }
      }
-     p{
+
+     .book-per{
+       margin-top: 30px;
+       width: 100%;
+       padding: 20px 0;
+       border-bottom: 1px solid #e5e5e5;
+       border-top: 1px solid #e5e5e5;
+       display: flex;
+       -webkit-display:flex;
+       flex-flow: row nowrap;
+       justify-content: space-around;
+       align-items: center;
+       .book-per-li{
+          text-align: center;
+          font-size:30px;
+          >p:nth-child(1){
+            color: #999999;
+            line-height: 45px;
+            font-size:30px;
+          }
+         >p:nth-child(2){
+           color: #333;
+           font-size:30px;
+         }
+       }
+     }
+
+     .book-read{
+       color: #999999;
+       font-size:28px;
+       line-height: 50px;
+       text-indent:50px;
+       letter-spacing:2px;
+       word-break: break-all;
+       text-overflow: ellipsis;
+       display: -webkit-box; /** 对象作为伸缩盒子模型显示 **/
+       -webkit-box-orient: vertical; /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+       -webkit-line-clamp: 5; /** 显示的行数 **/
+       overflow: hidden;  /** 隐藏超出的内容 **/
+     }
+
+
+
+
+   }
+
+}
+
+/*bookItem.vue  end*/
+
+/*chapter.vue  start*/
+   .chapter-content{
+       width: 100%;
+       height: 100%;
+     .head-cha{
+       padding:0px 25px ;
+     }
+     .head-tit{
        font-size:36px;
-       color: #999;
-       line-height: 40px;
+       height: 80px;
+       line-height: 80px;
+       border-bottom: 1px solid #F2F1F5;
+
      }
+     .color-div{
+       margin: 20px 0;
+       width: 100%;
+       display: flex;
+       -webkit-display:flex;
+       flex-flow:row nowrap;
+       justify-content: flex-end;
+       .color-picker{
+         width: 350px;
+       }
+       p{
+         width: 50px;
+         font-size:50px;
+         height: 48px;
+         line-height: 30px;
+         font-weight:bold;
+         text-align: center;
+         img{
+           margin-top: 2px;
+           width: 48px ;
+           height: 48px ;
+         }
+         .img1{
+           width: 45px !important;
+           height: 40px !important;
+         }
+
+       }
+       .ml{
+         margin-left: 15px;
+       }
+       .mr{
+         margin-top: -5px;
+         margin-right: 25px;
+       }
+     }
+
+     .pre-con{
+       font-size:30px;
+       line-height: 1.5;
+       color:#333;
+       white-space: pre-wrap;
+       word-wrap: break-word;
+       font-family: couriernew, courier, monospace;
+     }
+
+     .cha-btn-div{
+       padding: 20px 0px  ;
+       width: 100%;
+       display: flex;
+       -webkit-display:flex;
+       flex-flow: row nowrap;
+       justify-content: space-between;
+       align-items: center;
+       .addbook{
+         color: #fff;
+         border:1px solid #999;
+         font-size:30px;
+         border-radius: 10px;
+         text-align: center;
+         line-height: 60px;
+         height: 60px;
+         width: 30%;
+         img{
+           margin-top: 7px;
+           height: 45px;
+           width: 45px;
+         }
+       }
+       .no-borders{
+         border:0 !important;
+       }
+       .graybook{
+         background: #aaaaaa !important;
+       }
+     }
+
+
+
+
 
 
    }
 
 
 
-}
 
-
-
-/** my end  **//** my end  **/
-/** my end  **//** my end  **/
+/*chapter.vue  end*/
 

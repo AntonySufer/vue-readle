@@ -5,7 +5,7 @@
   width: 100%;
   position: fixed;
   top: 0;
-  background: #24292C;
+  background: #FE9424;
   color: #fff; }
   .headerCon .header-back {
     font-size: 40px;
@@ -28,90 +28,117 @@
     font-size: 24px; }
 
 /*footer  css  end*/
-/**index 首页  start**/
-/**index 首页  start**/
+/*main.vue main.vue main.vue start*/
 .main-content {
   width: 100%;
   height: 100%;
-  background: url("../img/bgindex.jpg") repeat-y center top;
-  background-size: 100% 100%; }
-  .main-content .index-autor {
-    z-index: 99;
+  background: #f8f8f8; }
+  .main-content .main-header {
+    height: 80px;
+    width: 100%;
     position: fixed;
-    bottom: 100px;
-    font-size: 35px;
-    font-weight: bold;
-    margin-left: 40%;
-    color: #333; }
-    .main-content .index-autor img {
-      border-radius: 60px;
-      border: 2px solid #e5e5e5;
-      width: 120px;
-      height: 120px; }
-    .main-content .index-autor p {
-      margin-top: 20px;
-      text-align: center; }
-  .main-content .main-login {
-    margin-top: 60%; }
+    top: 0;
+    background: #FE9424;
+    color: #fff;
+    display: flex;
+    -webkit-display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center; }
+    .main-content .main-header p {
+      margin-left: 25px;
+      line-height: 80px;
+      font-size: 30px; }
+    .main-content .main-header .main-head img {
+      width: 48px;
+      margin-left: 20px;
+      height: 48px;
+      margin-right: 25px; }
+    .main-content .main-header .main-head .sea-img {
+      width: 42px;
+      height: 42px; }
+  .main-content .main-con {
+    padding: 80px 20px 0 20px;
+    display: flex;
+    -webkit-display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    justify-items: center; }
+    .main-content .main-con .main-li {
+      width: 20%;
+      margin-top: 20px; }
+      .main-content .main-con .main-li .main-li-pre {
+        width: 100%;
+        text-align: center; }
+        .main-content .main-con .main-li .main-li-pre img {
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+          border-top-right-radius: 15px;
+          border-bottom-right-radius: 15px;
+          width: 90%;
+          border: 1px solid #e5e5e5;
+          height: 200px;
+          -moz-box-shadow: 5px 5px 5px #888888;
+          /* 老的 Firefox */
+          box-shadow: 5px 5px 5px #888888; }
+  .main-content .main-seach-p {
+    width: 100%;
+    font-size: 32px;
+    color: #999;
+    text-align: center;
+    position: absolute;
+    top: 120px; }
 
-/**index 首页  end**/
-/**index 首页  end**/
-/**art 文章  start**/
-/**art 文章  start**/
-/**art 文章  start**/
-/**art 文章  start**/
-.art-content .art-head {
-  position: fixed;
-  top: 80px;
+/*main.vue main.vue main.vue end*/
+/*seach css  start*/
+.seach-content {
+  height: 100%;
   width: 100%;
-  background: #fff;
-  border-bottom: 2px solid #FBFBFB;
-  -moz-box-shadow: 1px 1px 1px #FBFBFB, 2px 2px 5px #FBFBFB;
-  -webkit-box-shadow: 1px 1px 1px #FBFBFB, 2px 2px 5px #FBFBFB;
-  box-shadow: 1px 1px 1px #FBFBFB, 2px 2px 5px #FBFBFB; }
-  .art-content .art-head img {
-    display: inline-block;
-    height: 48px;
-    width: 48px;
-    margin-top: 10px;
-    margin-left: 20px; }
-.art-content .art-mid {
-  margin-top: 140px;
-  width: 100%;
-  background: #fff;
-  overflow-y: auto;
-  font-size: 30px; }
-.art-content .art-title {
-  padding: 0 20px;
-  font-size: 42px;
-  color: #000; }
-.art-content .art-img {
-  width: 100%;
-  height: 350px; }
-.art-content .yuedu {
-  height: 50px;
-  line-height: 50px;
-  font-size: 26px;
-  color: #999; }
-  .art-content .yuedu span {
-    padding-left: 20px; }
-.art-content .art-mid-con {
-  padding: 0px 20px;
-  color: #000;
-  font-size: 38px; }
-
-/**art 文章  end**/
-/**art 文章  end**/
-/**art 文章  end**/
-/**art 文章  end**/
-/** history start  **/
-/**history start   **/
-/** history start  **/
-/**history start   **/
-.history-content {
-  width: 100%;
-  height: 100%; }
-  .history-content .his-con {
+  /*中间内容*/
+  /*查询内容list*/ }
+  .seach-content .seach-header {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #FE9424;
+    color: #fff;
+    display: flex;
+    -webkit-display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center; }
+    .seach-content .seach-header p {
+      margin-left: 25px;
+      font-size: 30px; }
+    .seach-content .seach-header .img-p {
+      text-align: center;
+      margin-left: 10px;
+      padding-top: 10px; }
+    .seach-content .seach-header .menu-img {
+      width: 40px;
+      margin-left: 30px;
+      height: 40px; }
+    .seach-content .seach-header .input-p {
+      width: 70%; }
+    .seach-content .seach-header .sea-input {
+      padding-left: 20px;
+      font-size: 28px;
+      width: 100%;
+      height: 45px;
+      border: 0px;
+      border-radius: 20px; }
+    .seach-content .seach-header .header-back {
+      font-size: 40px;
+      display: inline-block;
+      width: 50px; }
+  .seach-content .his-no-search {
+    padding-top: 150px;
+    z-index: 99999;
+    font-size: 34px;
+    color: #999999;
+    text-align: center; }
+  .seach-content .sea-con {
     min-height: 480px;
     position: fixed;
     width: 100%;
@@ -120,45 +147,274 @@
     bottom: 0px;
     overflow: hidden;
     background: #fff; }
-    .history-content .his-con .his-list {
-      border-bottom: 1px solid #f2f2f2;
-      padding: 10px 20px; }
-      .history-content .his-con .his-list .his-title {
+    .seach-content .sea-con .his-list {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 20px; }
+      .seach-content .sea-con .his-list .his-tit {
+        font-size: 30px; }
+      .seach-content .sea-con .his-list .his-li {
+        font-size: 28px;
+        color: #fff;
+        display: flex;
+        -webkit-display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center; }
+        .seach-content .sea-con .his-list .his-li span {
+          opacity: .7;
+          border-radius: 16px;
+          display: inline-block;
+          padding: 5px 10px;
+          margin-right: 10px;
+          margin-top: 10px;
+          height: 40px; }
+        .seach-content .sea-con .his-list .his-li span:nth-child(4n+1) {
+          background: #63A69F; }
+        .seach-content .sea-con .his-list .his-li span:nth-child(4n+2) {
+          background: #F2E1AC; }
+        .seach-content .sea-con .his-list .his-li span:nth-child(4n+3) {
+          background: #F2836B; }
+        .seach-content .sea-con .his-list .his-li span:nth-child(4n+3) {
+          background: #F2594B; }
+        .seach-content .sea-con .his-list .his-li span:nth-child(4n+4) {
+          background: #CD2C24; }
+        .seach-content .sea-con .his-list .his-li span:nth-child(4n+5) {
+          background: #047878; }
+        .seach-content .sea-con .his-list .his-li span:nth-child(4n+6) {
+          background: #7F1637; }
+        .seach-content .sea-con .his-list .his-li span:nth-child(4n+7) {
+          background: #FFB733; }
+        .seach-content .sea-con .his-list .his-li span:nth-child(4n+8) {
+          background: #F57336; }
+    .seach-content .sea-con .remove-his {
+      width: 100%;
+      margin-top: 40px;
+      text-align: center; }
+      .seach-content .sea-con .remove-his img {
+        width: 35px;
+        height: 35px;
+        vertical-align: middle; }
+  .seach-content .sea-list {
+    min-height: 480px;
+    position: fixed;
+    width: 100%;
+    top: 80px;
+    left: 0;
+    bottom: 0px;
+    overflow-y: hidden;
+    background: #fff; }
+    .seach-content .sea-list .sea-ul {
+      padding: 0 25px; }
+      .seach-content .sea-list .sea-ul .sea-li {
+        padding: 20px 0;
+        border-bottom: 1px solid #e5e5e5;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start; }
+        .seach-content .sea-list .sea-ul .sea-li .img-div {
+          height: 174px;
+          width: 137px;
+          margin-right: 20px; }
+          .seach-content .sea-list .sea-ul .sea-li .img-div img {
+            height: 174px;
+            width: 137px; }
+        .seach-content .sea-list .sea-ul .sea-li .sea-li-tit {
+          font-size: 30px;
+          color: #595959;
+          word-break: break-all;
+          font-weight: bold;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          /** 对象作为伸缩盒子模型显示 **/
+          -webkit-box-orient: vertical;
+          /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+          -webkit-line-clamp: 1;
+          /** 显示的行数 **/
+          overflow: hidden;
+          /** 隐藏超出的内容 **/
+          line-height: 50px; }
+        .seach-content .sea-list .sea-ul .sea-li .sea-li-readme {
+          font-size: 26px;
+          line-height: 40px;
+          color: #595959; }
+        .seach-content .sea-list .sea-ul .sea-li .sea-li-jieshao {
+          font-size: 24px;
+          line-height: 30px;
+          color: #b6b6b6;
+          word-break: break-all;
+          font-weight: bold;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          /** 对象作为伸缩盒子模型显示 **/
+          -webkit-box-orient: vertical;
+          /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+          -webkit-line-clamp: 3;
+          /** 显示的行数 **/
+          overflow: hidden;
+          /** 隐藏超出的内容 **/ }
+
+/*seach css  end*/
+/*bookItem.vue*/
+.book-content {
+  width: 100%;
+  top: 80px;
+  left: 0;
+  bottom: 0;
+  position: absolute; }
+  .book-content .book-tit-con {
+    padding: 0 25px; }
+    .book-content .book-tit-con .tit-div {
+      margin-top: 20px; }
+    .book-content .book-tit-con .tit-img {
+      float: left;
+      width: 15%; }
+      .book-content .book-tit-con .tit-img img {
+        height: 137px;
+        width: 100px; }
+    .book-content .book-tit-con .tit-readme {
+      float: left;
+      width: 85%;
+      font-size: 28px; }
+      .book-content .book-tit-con .tit-readme p {
+        margin-left: 15px !important; }
+      .book-content .book-tit-con .tit-readme > p:nth-child(1) {
+        line-height: 50px;
         font-size: 36px;
-        line-height: 50px; }
-      .history-content .his-con .his-list .his-date {
-        font-size: 20px;
-        color: #999; }
-
-/** history end  **/
-/**history end   **/
-/** history end  **/
-/**history end   **/
-/** my start  **/
-/** my start  **/
-/** my start  **/
-/** my start  **/
-.my-content {
-  height: 100%; }
-  .my-content .my-mid {
-    padding-top: 80px;
-    padding-left: 20px;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center; }
-    .my-content .my-mid img {
+        color: #000; }
+      .book-content .book-tit-con .tit-readme > p:nth-child(2) {
+        color: #ea6f5a; }
+      .book-content .book-tit-con .tit-readme > p:nth-child(3) {
+        color: #999999; }
+    .book-content .book-tit-con .button-div {
       margin-top: 20px;
-      height: 200px;
-      width: 200px; }
-    .my-content .my-mid p {
-      font-size: 36px;
-      color: #999;
-      line-height: 40px; }
+      width: 100%;
+      display: flex;
+      -webkit-display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center; }
+      .book-content .book-tit-con .button-div .addbook {
+        color: #fff;
+        font-size: 30px;
+        border-radius: 10px;
+        text-align: center;
+        line-height: 60px;
+        background: #FE9424;
+        height: 60px;
+        width: 45%; }
+      .book-content .book-tit-con .button-div .graybook {
+        background: #aaaaaa !important; }
+    .book-content .book-tit-con .book-per {
+      margin-top: 30px;
+      width: 100%;
+      padding: 20px 0;
+      border-bottom: 1px solid #e5e5e5;
+      border-top: 1px solid #e5e5e5;
+      display: flex;
+      -webkit-display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center; }
+      .book-content .book-tit-con .book-per .book-per-li {
+        text-align: center;
+        font-size: 30px; }
+        .book-content .book-tit-con .book-per .book-per-li > p:nth-child(1) {
+          color: #999999;
+          line-height: 45px;
+          font-size: 30px; }
+        .book-content .book-tit-con .book-per .book-per-li > p:nth-child(2) {
+          color: #333;
+          font-size: 30px; }
+    .book-content .book-tit-con .book-read {
+      color: #999999;
+      font-size: 28px;
+      line-height: 50px;
+      text-indent: 50px;
+      letter-spacing: 2px;
+      word-break: break-all;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      /** 对象作为伸缩盒子模型显示 **/
+      -webkit-box-orient: vertical;
+      /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+      -webkit-line-clamp: 5;
+      /** 显示的行数 **/
+      overflow: hidden;
+      /** 隐藏超出的内容 **/ }
 
-/** my end  **/
-/** my end  **/
-/** my end  **/
-/** my end  **/
+/*bookItem.vue  end*/
+/*chapter.vue  start*/
+.chapter-content {
+  width: 100%;
+  height: 100%; }
+  .chapter-content .head-cha {
+    padding: 0px 25px; }
+  .chapter-content .head-tit {
+    font-size: 36px;
+    height: 80px;
+    line-height: 80px;
+    border-bottom: 1px solid #F2F1F5; }
+  .chapter-content .color-div {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    -webkit-display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end; }
+    .chapter-content .color-div .color-picker {
+      width: 350px; }
+    .chapter-content .color-div p {
+      width: 50px;
+      font-size: 50px;
+      height: 48px;
+      line-height: 30px;
+      font-weight: bold;
+      text-align: center; }
+      .chapter-content .color-div p img {
+        margin-top: 2px;
+        width: 48px;
+        height: 48px; }
+      .chapter-content .color-div p .img1 {
+        width: 45px !important;
+        height: 40px !important; }
+    .chapter-content .color-div .ml {
+      margin-left: 15px; }
+    .chapter-content .color-div .mr {
+      margin-top: -5px;
+      margin-right: 25px; }
+  .chapter-content .pre-con {
+    font-size: 30px;
+    line-height: 1.5;
+    color: #333;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-family: couriernew, courier, monospace; }
+  .chapter-content .cha-btn-div {
+    padding: 20px 0px;
+    width: 100%;
+    display: flex;
+    -webkit-display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center; }
+    .chapter-content .cha-btn-div .addbook {
+      color: #fff;
+      border: 1px solid #999;
+      font-size: 30px;
+      border-radius: 10px;
+      text-align: center;
+      line-height: 60px;
+      height: 60px;
+      width: 30%; }
+      .chapter-content .cha-btn-div .addbook img {
+        margin-top: 7px;
+        height: 45px;
+        width: 45px; }
+    .chapter-content .cha-btn-div .no-borders {
+      border: 0 !important; }
+    .chapter-content .cha-btn-div .graybook {
+      background: #aaaaaa !important; }
+
+/*chapter.vue  end*/
 
 /*# sourceMappingURL=main.css.map */

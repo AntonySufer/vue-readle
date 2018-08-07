@@ -20,16 +20,14 @@ if (process.env.NODE_ENV == 'development') {
   //imgBaseUrl = '';
 }
 
-let myUrl= process.env.API_HOST+'wx.post?func=' ;  //api在config的index设置跨域.process.env.API_HOST根据环境区分
+let apiUrl =process.env.API_HOST;
+let chapter= process.env.CHAPTER_HOST;
 
 let api={
-   "userLogin":myUrl+'userLogin',
-   "getNotes":myUrl+'get_today_note', //每日一句
-   "getIndexArt": myUrl+'yidian-get_index_article', //首页文章
-   "getHistory": myUrl+'yidian-get_list_article', //历史文章list
-   "getAttent": myUrl+'yidian-get_collect_article'//关注文章list
+   "searchList":apiUrl+"book/fuzzy-search?",//小说查询
+    "getBookDet":apiUrl+'book/'  //小说介绍,
 
-}
+};
 
 
 export {

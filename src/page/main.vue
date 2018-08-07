@@ -1,77 +1,73 @@
 <template>
 
   <div id="main" class="main-content">
-      <HDEADERS v-bind:if_back="0"></HDEADERS>
-      <!-- 主要内容 -->
-    <p class="text-con" v-text="noteData.node"></p>
-
-    <div class="index-autor" v-on:click="goArt" >
-      <img src="../assets/img/11.jpg" />
-       <p v-on:click="goArt" >进入</p>
+    <div class="main-header">
+      <p>一点小说</p>
+      <div class="main-head">
+        <router-link to="/seach"><img class="sea-img" src="@assets/img/search.png"/></router-link>
+        <router-link to="/"><img class="menu-img" src="@assets/img/menu.png"/></router-link>
+        <div></div>
+      </div>
     </div>
+
+
+    <section v-if="hasList">
+
+      <div class="main-con">
+
+        <div class="main-li" v-for="(item,index) in bookList" :key="index" @click="goBook(item)">
+          <div class="main-li-pre">
+            <img  v-bind:src="item.cover"/>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section v-else @click="goSeach">
+       <p class="main-seach-p"> 书架空空如也，赶紧搜索添加吧</p>
+    </section>
 
   </div>
 
 
 </template>
 
-<style scoped="">
-  .text-con{
-    opacity: 0.4;
-    position: fixed;
-    top:100px;
-    left: 30px;
-    color: #999999;
-    width: 100%;
-    height: 400px;
-    writing-mode: vertical-lr;/*从左向右 从右向左是 writing-mode: vertical-rl;*/
-    writing-mode: tb-lr;/*IE浏览器的从左向右 从右向左是 writing-mode: tb-rl；*/
-    font-size:30px;
-  }
+<style lang="scss" scoped>
 
 </style>
 
 <script type="text/javascript">
- import HDEADERS from '../components/header.vue';
- import {mapState,mapActions,mapGetters} from 'vuex';
-
 
  export default {
     components: {
-      HDEADERS
+
     },
     data () {
       return {
-        noteData:{},
-        imgUrl :'./static/assets/img6.jpg'
+        bookList : this.$util.getStore('bookList') || [], //我的书架
       }
     },
     computed:{
-      ...mapGetters(['getUserInfo'])//测试下mapGetters
+      hasList(){
+          if (this.bookList.length > 0){
+            return true ;
+          }
+          return false ;
+      }
+    },
+    watch:{
+
     },
     created(){
-     this.getNotes();
-     let userInfo ={'openId':'ohhpN5RCGIIiRZAP7V52sBdwrKyU'}; //测试下action
-     this.setUser(userInfo);
+
     },
     methods:{
-      ...mapActions(['setUser']),//测试下action
-      goArt() {
-         this.$router.push('/art');
-      },
-      getNotes(){
-         var _this = this ;
-        this.$axios.post(this.$api.getNotes).then((response)=>{
-          var Data =response.data;
-          if (Data && Data.status==200){
-            _this.noteData = Data ;
-          }
-
-        }).catch((err)=>{
-          this.showToast( err.message,'warn');
-        })
+        goBook(item){
+          this.$router.push({name: 'book',params:{'id':item._id,'page':item.page,'top':item.scrollTop}});
+        },
+       goSeach(){
+         this.$router.push('/seach');
       }
-
     }
 
   }

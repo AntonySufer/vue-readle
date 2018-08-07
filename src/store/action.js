@@ -23,4 +23,8 @@ export default{
   setUser:({ commit},userInfo) => {
     commit( types.SETUSERINFO,userInfo )
   },
+  upbooklist:({ commit},bookItem) => {
+    commit( types.UPBOOKLIST,bookItem )
+  }
+
 }

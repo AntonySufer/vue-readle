@@ -95,7 +95,7 @@
 
   /*公用transition*/
 .common-fade-enter-active, .common-fade-leave-active {
-  transition: opacity .4s;
+  transition: opacity .1s;
   /*opacity: 1;*/
   /*-webkit-transition: opacity linear 0.2s;*/
   /*transition: opacity linear 0.2s;*/

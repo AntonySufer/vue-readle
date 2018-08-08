@@ -10,7 +10,8 @@ Github项目地址:[https://github.com/AntonySufer/vue-readle](https://github.co
 
 微信小程序  [一点文章](https://github.com/AntonySufer/yidianwz_wx) 已上线，可以再微信搜索 一点文章体验
 
-
+## 在线体验地址
+[点击这里体验](https://github.com/AntonySufer/vue-readle)
 
 ## 部分效果截图
 ![exp11](static/exp/exp11.gif)

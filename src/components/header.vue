@@ -1,6 +1,6 @@
 <template>
    <div class="headerCon">
-       <p> <span @click="goBack" class="header-back" v-if="if_back=='1'" > < </span> 微小说 </p>
+       <p> <span @click="goBack" class="header-back" v-if="if_back=='1'" > < </span> 一点小说 </p>
    </div>
 
 </template>

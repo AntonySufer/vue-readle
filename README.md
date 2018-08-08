@@ -11,7 +11,7 @@ Github项目地址:[https://github.com/AntonySufer/vue-readle](https://github.co
 微信小程序  [一点文章](https://github.com/AntonySufer/yidianwz_wx) 已上线，可以再微信搜索 一点文章体验
 
 ## 在线体验地址
-[点击这里体验](https://sufer666.top/reader/#/)
+[点击这里体验](https://sufer666.top/reader/#/)(服务器太low，渲染慢)
 
 ## 部分效果截图
 ![exp11](static/exp/exp11.gif)
@@ -105,7 +105,7 @@ app.use('/chapter', proxy({
 
 欢迎`issue`，`pr`，`star` or `follow`！
 
-[你可以在这里打赏我](http://blog.shanamaid.top/sponsor/)
+[你可以在这里打赏我](https://note.sufer666.top/2018/08/08/%E4%B8%80%E7%82%B9%E5%B0%8F%E8%AF%B4/)
 
 
 

@@ -40,7 +40,7 @@ npm run dev
 
 # 打包
 npm run build
-
+```
 
 
 
@@ -97,7 +97,7 @@ app.use('/chapter', proxy({
   changeOrigin: true
 }
 ));
-
+```
 
 
 ## 支持
@@ -106,7 +106,6 @@ app.use('/chapter', proxy({
 
 [你可以在这里打赏我](http://blog.shanamaid.top/sponsor/)
 
-你的支持将有助于项目维护以及提高用户体验，感谢各位的支持！
 
 
 

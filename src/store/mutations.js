@@ -24,7 +24,7 @@ const mutations = {
     state = {list: localList, id: new Set(localBookIdList)};
     switch(action.type){
       case 'add':
-        console.log(state.id);
+
         if (state.id.has(action.data._id)) {
           return state;
         }

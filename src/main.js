@@ -59,12 +59,8 @@ router.beforeEach((to, from, next) => {
     }else{
       from.meta.keepAlive = true;
     }
-
-  }else{
-    if (from.path=='/seach'){
-      from.meta.keepAlive = true;
-    }
   }
+
   next();
 });
 

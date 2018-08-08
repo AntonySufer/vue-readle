@@ -160,16 +160,14 @@
     },
     watch:{
       '$route'(to, from) {
-          console.log('$route$route$route$route',to);
            this.$router.go(0);
+
       }
     },
     mounted(){
         var _this = this ;
       this.$nextTick(function () {
 
-        window.scrollTo(0, _this.scrollTop);//滚动条
-       // document.body.scrollTo(0, this.scrollTop);
         //监控滚动
         window.addEventListener('scroll',_this.handleScroll );
       });
@@ -303,11 +301,11 @@
           page= page>=1 ? page -=1  : 0;
         }
 
-        _this.$router.push({name: 'chapter',params:{'id':this.id,'page':page,'top':0}});
+        _this.$router.replace({name: 'empty',params:{'id':this.id,'page':page,'top':0}});
       },
       goNext(i){
 
-        this.$router.push({name: 'chapter',params:{'id':this.id,'page':i,'top':0}});
+        this.$router.replace({name: 'empty',params:{'id':this.id,'page':i,'top':0}});
       },
       handleScroll(){
          this.newScrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
@@ -333,7 +331,10 @@
       }
     },
      beforeDestroy() {
+
        this.keepItem();
+
+       this.scrollTop=0;
        window.removeEventListener('scroll', this.handleScroll);
      //存储当前滚动和章节挂载到本地上
 

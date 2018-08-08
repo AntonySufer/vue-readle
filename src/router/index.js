@@ -32,7 +32,8 @@ export default new Router({
     { path: '*', component: resolve => require(['../components/err.vue'], resolve) },
     { path: '/seach',meta: { keepAlive: true }, component: resolve => require(['../page/seach.vue'], resolve) },
     { path: '/book/:id?', name: 'book',   component: resolve => require(['../page/bookItem.vue'], resolve)},
-    { path: '/chapter/:id?/:page?/:top?', name: 'chapter',   component: resolve => require(['../page/chapter.vue'], resolve)}
+    { path: '/chapter/:id?/:page?/:top?', name: 'chapter',   component: resolve => require(['../page/chapter.vue'], resolve)},
+    { path: '/empty/:id?/:page?/:top?', name: 'empty',   component: resolve => require(['../page/empty.vue'], resolve)}
 
 
   ]

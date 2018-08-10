@@ -137,7 +137,10 @@
                _this.isloading =false ;
                  return ;
              }
-             booksList.map((item) => { item.cover = item.cover ? this.$util.url2Real(item.cover):'../assets/img/error.jpg'});
+             booksList.map((item) => {
+                 item.cover = item.cover ? this.$util.url2Real(item.cover):'../assets/img/error.jpg';
+                 item.shortIntro = item.shortIntro.length > 60 ? item.shortIntro.substr(0,60) : item.shortIntro ;
+             });
 
              if (booksList.length<15 && _this.start==0 ){
                _this.booksList =booksList ;

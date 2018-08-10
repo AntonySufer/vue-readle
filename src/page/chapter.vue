@@ -56,16 +56,16 @@
 </template>
 
 <style lang="scss" scoped>
-  .fzSize-40{
+  .fzSize-44{
     font-size: 44px;
   }
-  .fzSize-36{
+  .fzSize-40{
     font-size: 40px;
   }
-  .fzSize-32{
+  .fzSize-36{
     font-size: 36px;
   }
-  .fzSize-28{
+  .fzSize-32{
     font-size: 32px;
   }
   .cell-ref{
@@ -149,11 +149,10 @@
         }else{ //存在 直接获取资源
           if (!bookItem.chapters[this.page].link){
              this.getChpterDea(bookItem.chapters);
-            console.log('no_chapters_link');
           }else{
             this.chapterList = bookItem.chapters;
             this.getText(bookItem.chapters);
-            console.log('chapters_id');
+
           }
         }
 
@@ -246,22 +245,23 @@
       fontSizefunc(fzSize,type){
         let fzSize_num =fzSize.substr(fzSize.length-2,fzSize.length);
          if (type == 'add'){
-            if (fzSize_num == 36){
-              return;
+            if (fzSize_num < 44){
+              fzSize_num =Number(fzSize_num) + 4;
             }
-           fzSize_num =Number(fzSize_num) + 4;
+
          }else{
-           if (20 == fzSize_num){
-             return;
+
+           if (32 < fzSize_num){
+             fzSize_num =Number(fzSize_num) - 4;
            }
-           fzSize_num =Number(fzSize_num) - 4;
+
          }
         this.fzSize = 'fzSize-'+fzSize_num;
         this.$util.setStore('fzSize',this.fzSize);
 
       },
       menuFunc(type){
-          console.log('222222222');
+
           if (type =='取消'){
               this.showMenu = false ;
             return;
@@ -312,7 +312,7 @@
       },
       //缓存
       keepItem(){
-        console.log('2222222222222222');
+
         //存储章节 和位置 ，保留20章节
         let bookData = this.$util.getOneBookStore(this.id);
            if(!bookData){
